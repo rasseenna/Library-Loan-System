@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Coventry Library Loan System</title>
+		<link type="text/css" rel="stylesheet" href="/style/main.css">
+		<script type="module" src="/navigation.js"></script>
+	</head>
+	<body>
+		<aside class="hidden"><p></p></aside>
+		<header>
+			<h1>Coventry Library Loan System</h1>
+			<p>&nbsp;</p>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/shome">Student Home</a></li>
+				<li><a href="/register">Register</a></li>
+				<li><a href="/addbook">ADD BOOK</a></li>
+				<li><a href="/manageuser">MANAGE USER</a></li>
+				<li><a href="/foo">Foo</a></li>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="/logout">Log out</a></li>
+			</ul>
+		</nav>
+		<main>
+			<!-- page content goes here -->
+		</main>
+		<footer>
+			<p>&nbsp;</p>
+		</footer>
+			<template id="home">
+				<button><a href="/addbook">ADD BOOK</a></button>
+				<button><a href="/manageuser">MANAGE USER</a></button>
+	</template>
+	<template id="sbooklist">
+			<section>
+				<table>
+				<tr>************Search Results Here*******</tr></br><tr>
+				Book Title : <h2></h2></br>
+				Primary Author : <h4></h4></br>
+				Quantity of Books : <p></p></tr></br>
+				****************</br>
+				</table>
+			</section>
+		</template>
+	<template id="shome">
+		<form name="searching">
+		<p><input type="text" name="search" placeholder="Type title or author here for search" /></p>
+		<button type="submit">Search</button>
+		</form>
+	</template>
+	<template id="manageuser">
+				<button><a href="/student1">Student1</a></button></br>
+				<button><a href="/student2">Student2</a></button>
+	</template>
+	<template id="student1">
+				<button><a href="/student2">Student2</a></button></br>
+	</template>
+	<template id="student2">
+				<button><a href="/student1">Student1</a></button></br>
+	</template>
+
+	<template id="addbook">
+			<script type="module" src="/slider.js" defer></script>
+			<form name="addbook">
+				<p><label for="name">Book Title</label></br><input type="text" name="name" placeholder="Book Title" /></p>
+				<p><label for="author">Primary Author</label></br><input type="text" name="author" placeholder="Author Name" /></p>
+				<p><label for="isbn">ISBN Number</label></br><input type="text" name="isbn" placeholder="13 digit ISBN Number" /></p>
+				<p><label for="dewey">Dewey Classification Number</label></br><input type="text" name="dewey" placeholder="Dewey Number" /></p>
+				<p><label for="slider">Quantity</label></br>
+				<input type="range" name="sliderValue" value="1" min="1" max="10">
+				<output name="slider">1</output></p>
+				<p><label for="loanPeriod">Loan Period</label></br>
+				<select name="loanPeriod">
+					<option value="24 hours">24 hours</option>
+					<option value="2 days">2 days</option>
+					<option selected value="1 week">1 week</option>
+					<option value="2 weeks">2 weeks</option>
+					<option value="a month">A month</option>
+				</select>
+				</p>
+				<p>
+					<button type="submit">Create Book</button>
+				</p>
+			</form>
+
+		</template>
+	<template id="login">
+		<form name="login">
+			<p><label for="email">Username</label><br /><input type="text" name="user" placeholder="username" /></p>
+			<p><label for="pass">Password</label><br /><input type="password" name="pass" placeholder="password" /></p>
+			<p><button type="submit">Log in</button></p>
+		</form>
+	</template>
+	<template id="register">
+		<form name="register">
+			<p><label for="name">Username</label><br /><input type="text" name="user" placeholder="full name" /></p>
+			<p><label for="pass">Password</label><br /><input type="password" name="pass" placeholder="password" /></p>
+			<p><button type="submit">Create account</button></p>
+		</form>
+	</template>
+	<template id="logout">
+			<p>Do you want to log out?</p>
+			<p><button>OK</button><button>Cancel</button></p>
+	</template>
+	<template id="foo">
+
+	</template>
+		<template id="booklist">
+			<section>
+				<table><tr>
+				
+				Book Title : <h2></h2></br>
+				Primary Author : <h4></h4></br>
+				Quantity of Books : <p></p></tr></br>
+				-------------------------</br>
+				</table>
+			</section>
+	</template>
+	<template id="shomelisting" style="visibility:visible;">
+			<section>
+				<table><tr>
+				
+				Book Title : <h2></h2></br>
+				Primary Author : <h4></h4></br>
+				Quantity of Books : <p></p></tr></br>
+				-------------------------</br>
+				</table>
+			</section>
+	</template>
+	<template id="userlist">
+			<section>
+				<table><tr>
+				<h2></h2>
+				<h4></h4>
+				<p></p></tr>
+				</table></br>
+				-------------------------</br>
+			</section>
+	</template>
+	<template id="student1list">
+			<section>
+				<table><tr>
+				<h2></h2>
+				<h4></h4>
+				<p></p></tr>
+				</table></br>
+				-------------------------</br>
+			</section>
+	</template>
+	<template id="student2list">
+			<section>
+				<table><tr>
+				<h2></h2>
+				<h4></h4>
+				<p></p></tr>
+				</table></br>
+				-------------------------</br>
+			</section>
+	</template>
+	</body>
+</html>
